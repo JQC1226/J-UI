@@ -1,0 +1,79 @@
+@import "variables";
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+
+    .switch-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+    }
+
+    .switch-text {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
+    .toggle-indicator {
+        width: 40px;
+        height: 20px;
+        background: $disabled-color;
+        border-radius: 50px;
+        position: relative;
+        transition: background 0.3s ease;
+
+        &::after {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+    }
+
+    input:checked+.switch-label .toggle-indicator {
+        background: $primary-color;
+
+        &::after {
+            transform: translateY(-50%) translateX(20px);
+        }
+    }
+
+    input:disabled+.switch-label {
+        cursor: not-allowed;
+        opacity: 0.6;
+
+        .toggle-indicator {
+            background: darken($disabled-color, 10%);
+        }
+
+        &::after {
+            background: lighten($disabled-color, 10%);
+        }
+    }
+
+    input:disabled:checked+.switch-label .toggle-indicator {
+        background: lighten($primary-color, 20%);
+
+        &::after {
+            transform: translateY(-50%) translateX(20px);
+            background: darken(white, 20%);
+        }
+    }
+}
