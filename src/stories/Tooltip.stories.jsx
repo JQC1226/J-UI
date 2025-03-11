@@ -5,6 +5,9 @@ import Tooltip from '../component/Tooltip/Tooltip';
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 const Template = (args) => <Tooltip {...args} />;
@@ -29,8 +32,8 @@ Disabled.args = {
   children: <button>Hover over me!</button>
 };
 
-export const CustomTheme = Template.bind({});
-CustomTheme.args = {
+export const CustomTooltipText = Template.bind({});
+CustomTooltipText.args = {
   text: "Stylish Tooltip",
   options: { theme: 'dark' },
   children: <button>Hover over me!</button>
