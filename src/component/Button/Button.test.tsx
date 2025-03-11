@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Button from "./Button"; // Adjust the path accordingly
+import Button from "./Button"; 
 
 describe("Button Component", () => {
   test("renders the button with default props", () => {
@@ -26,10 +26,9 @@ describe("Button Component", () => {
       />
     );
 
-    // Verify the visually hidden message is present
     const a11yMessage = screen.getByText("Screen Reader Text");
     expect(a11yMessage).toBeInTheDocument();
-    expect(a11yMessage).toHaveClass("a11y"); // Ensure it's using the a11y class
+    expect(a11yMessage).toHaveClass("a11y"); 
   });
 
   test("calls onClick function when clicked", () => {

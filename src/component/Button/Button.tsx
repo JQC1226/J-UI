@@ -12,17 +12,25 @@ interface A11yMessages {
 interface Props {
   messages?: Messages;
   a11yMessages?: A11yMessages;
+  ariaControls?: string;
+  ariaExpanded?: boolean;
   onClick?: () => void;
+  className?: string;
 }
 
 const Button: React.FC<Props> = ({
   messages = { buttonLabel: "" },
   a11yMessages = { buttonLabel: "" },
+  ariaControls = "button",
+  className = "button",
+  ariaExpanded,
   onClick,
 }) => {
   return (
     <button
-      className="button"
+      className={className}
+      aria-controls={ariaControls}
+      aria-expanded={ariaExpanded}
       onClick={(e) => {
         e.preventDefault();
         onClick?.();
