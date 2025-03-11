@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/scss/switch.scss";
 
 interface SwitchProps {
@@ -9,28 +9,33 @@ interface SwitchProps {
   onChange?: (checked: boolean) => void;
 }
 
-function Switch({
+const Switch: React.FC<SwitchProps> = ({
   id,
   checked = false,
   text = "",
   disabled = false,
   onChange,
-}: SwitchProps) {
+}) => {
   const [isChecked, setIsChecked] = useState(checked);
 
-  function handleToggle() {
-    if (onChange) {
-      setIsChecked((previousChecked) => !previousChecked);
-    }
-  }
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
 
-  function handleKeydown(event: React.KeyboardEvent<HTMLInputElement>) {
+  const handleToggle = () => {
+    if (disabled) return;
+    setIsChecked((prev) => {
+      const newChecked = !prev;
+      onChange?.(newChecked); 
+      return newChecked;
+    });
+  };
+
+  const handleKeydown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      if (onChange) {
-        setIsChecked((previousChecked) => !previousChecked);
-      }
+      handleToggle();
     }
-  }
+  };
 
   return (
     <div className="switch">
@@ -48,6 +53,6 @@ function Switch({
       </label>
     </div>
   );
-}
+};
 
 export default Switch;
