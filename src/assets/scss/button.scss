@@ -1,0 +1,38 @@
+// Accessibility mixin: Hides visually but remains readable for screen readers
+@import "./mixins";
+.a11y {
+  @include a11y-hidden;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:active {
+    background-color: #003d80;
+  }
+
+  &:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+  }
+
+  &__text {
+    margin-right: 8px;
+  }
+}
