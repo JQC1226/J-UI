@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import Button from "../../src/component/Button/Button"; // Adjust the path based on your structure
+import Button from "../component/Button/Button"; 
 
 const meta = {
   title: "Components/Button",
@@ -15,24 +14,23 @@ const meta = {
     a11yMessages: { buttonLabel: "Press this button to submit the form" },
     onClick: fn(),
   },
-} satisfies Meta<typeof Button>;
+}
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default = {};
 
-export const WithA11yMessage: Story = {
+export const WithA11yMessage = {
   args: {
     messages: { buttonLabel: "Visible Text " },
     a11yMessages: { buttonLabel: "This message is for screen readers" },
   },
 };
 
-export const Disabled: Story = {
+export const Disabled = {
   args: {
     messages: { buttonLabel: "Disabled Button" },
     a11yMessages:{buttonLabel: ""},
-    onClick: undefined, // Prevents clicking
+    onClick: undefined, 
   },
 };
