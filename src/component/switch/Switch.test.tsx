@@ -27,8 +27,7 @@ describe("Switch Component", () => {
 
     // Click to toggle ON
     fireEvent.click(checkbox);
-    console.log("Checkbox clicked, checked state:", checkbox.checked);
-    console.log("onChangeMock calls:", onChangeMock.mock.calls);
+    
     expect(onChangeMock).toHaveBeenLastCalledWith(true);
 
     // Click to toggle OFF

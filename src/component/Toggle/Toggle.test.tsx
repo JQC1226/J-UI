@@ -68,8 +68,6 @@ describe("Toggle Component", () => {
 
     const buttonElement = screen.getByRole("button");
 
-    console.log("Rendered Button:", buttonElement.outerHTML);
-
     expect(buttonElement).toHaveAttribute("aria-controls", "content-id");
     expect(buttonElement).toHaveAttribute("aria-expanded", "false");
 

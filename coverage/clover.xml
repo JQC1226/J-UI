@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1741704826900" clover="3.2.0">
-  <project timestamp="1741704826900" name="All files">
-    <metrics statements="33" coveredstatements="33" conditionals="24" coveredconditionals="24" methods="10" coveredmethods="10" elements="67" coveredelements="67" complexity="0" loc="33" ncloc="33" packages="3" files="3" classes="3"/>
+<coverage generated="1741792150014" clover="3.2.0">
+  <project timestamp="1741792150014" name="All files">
+    <metrics statements="55" coveredstatements="55" conditionals="33" coveredconditionals="30" methods="15" coveredmethods="15" elements="103" coveredelements="100" complexity="0" loc="55" ncloc="55" packages="4" files="4" classes="4"/>
     <package name="Button">
       <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="Button.tsx" path="C:\Users\cjqxs\OneDrive\Desktop\ui-react\my-react-storybook\src\component\Button\Button.tsx">
@@ -28,6 +28,34 @@
         <line num="38" count="4" type="stmt"/>
         <line num="41" count="11" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Tooltip">
+      <metrics statements="22" coveredstatements="22" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <file name="Tooltip.tsx" path="C:\Users\cjqxs\OneDrive\Desktop\ui-react\my-react-storybook\src\component\Tooltip\Tooltip.tsx">
+        <metrics statements="22" coveredstatements="22" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="37" count="7" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="43" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="48" count="7" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+        <line num="53" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="54" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="7" type="stmt"/>
+        <line num="59" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="60" count="6" type="stmt"/>
+        <line num="63" count="7" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
       </file>
     </package>
     <package name="switch">
