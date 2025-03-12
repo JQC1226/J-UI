@@ -161,7 +161,17 @@ function TabPanel({
           </li>
         ))}
       </ul>
-      {children}
+      <div className="tab-content">
+        {React.Children.toArray(children).map((child) => {
+          if (
+            React.isValidElement<{ tabId: string }>(child) &&
+            child.props.tabId === selectedTab
+          ) {
+            return child;
+          }
+          return null;
+        })}
+      </div>
     </div>
   );
 }
