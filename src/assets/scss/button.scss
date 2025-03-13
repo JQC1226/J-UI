@@ -1,4 +1,3 @@
-// Accessibility mixin: Hides visually but remains readable for screen readers
 @import "./mixins";
 .a11y {
   @include a11y-hidden;
