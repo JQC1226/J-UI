@@ -52,18 +52,20 @@ const Modal: React.FC<ModalProps> = ({
 
       document.getElementById(appContentId)?.setAttribute("inert", "true");
 
-
+      // Focus the modal content when opened
       contentRef.current?.focus();
     } else {
+      // Remove inert attribute on main content when modal closes
       document.getElementById(appContentId)?.removeAttribute("inert");
 
+      // Restore focus to the previous element
       if (focusPrevElementOnModalClose) {
         lastElementFocusedBeforeModalOpen.current?.focus();
       }
     }
 
     return () => {
-
+      // Clean up when the modal is unmounted
       document.getElementById(appContentId)?.removeAttribute("inert");
     };
   }, [modelValue, appContentId, focusPrevElementOnModalClose]);
