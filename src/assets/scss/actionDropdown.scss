@@ -1,0 +1,73 @@
+/* ActionDropdown.scss */
+
+.action-dropdown {
+  display: inline-block;
+  position: relative;
+  font-family: sans-serif;
+
+  // When the dropdown is disabled, reduce opacity and disable pointer events.
+  &.disabled-all {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  // Header styling when a title is provided.
+  &.action-button-with-title {
+    .action-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      padding: 0.5rem 0;
+
+      .title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+
+      .dropdown-arrow-icon {
+        font-size: 0.8rem;
+        color: #555;
+      }
+    }
+  }
+
+  // Default icon styling when no title is provided.
+  .action-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  // Style for the select element.
+  select.md {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+
+  // Hidden element used for accessibility focus management.
+  .a11y.vo-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
