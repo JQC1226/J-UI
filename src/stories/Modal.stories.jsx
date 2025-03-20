@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { fn } from "@storybook/test";
-import Modal from "../component/Modal/Modal"; // Adjust path as needed
+import Modal from "../component/Modal/Modal"; 
 
 export default {
   title: "Components/Modal",

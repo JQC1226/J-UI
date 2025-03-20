@@ -1,5 +1,4 @@
 import React from "react";
-import { fn } from "@storybook/test";
 import TabPanel, { TabProvider } from "../component/Tab/Tab";
 
 const meta = {

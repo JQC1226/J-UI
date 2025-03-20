@@ -1,5 +1,5 @@
 import { fn } from "@storybook/test";
-import Toggle from "../component/Toggle/Toggle"; // Adjust the import path
+import Toggle from "../component/Toggle/Toggle";
 
 const meta = {
   title: "Components/Toggle",
